@@ -1,4 +1,3 @@
-
 public class Hello {
 
 	public static void main(String[] args) {
@@ -11,10 +10,7 @@ public class Hello {
 		System.out.println("219019217 - This line was added by Aaron Baumgartner.");
 		System.out.println("215061276 - This line was added by Sean Strachan.");
 		System.out.println("SacStateID - This line was added by First name Last name.");
-		System.out.println("SacStateID - This line was added by First name Last name.");
-		System.out.println("SacStateID - This line was added by First name Last name.");
-		System.out.println("SacStateID - This line was added by First name Last name.");
 
-}
+  }
 
-}
+} // Hello class
