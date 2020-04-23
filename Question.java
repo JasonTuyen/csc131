@@ -3,8 +3,8 @@ package quizApp;
 protected class Question {
 
     // members
-    private Category category;
-    private String   prompt;
+    private final int    categoryId;
+    private final String prompt;
 
     // Constructor
     Question( Category category, String prompt ) {
