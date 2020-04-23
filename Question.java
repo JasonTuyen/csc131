@@ -14,7 +14,7 @@ protected class Question {
     public Category category() {
     }
 
-    public Strong prompt() {
+    public String prompt() {
     }
 
 } // Question class
