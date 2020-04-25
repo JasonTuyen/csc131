@@ -9,6 +9,9 @@ protected class Quiz {
     ArrayList<Category> categories;  // should this be a hashmap? idk
 
     // Constructors
+    Quiz(){
+        
+    }
 
     // methods
     // implement an iterator here:
@@ -33,5 +36,19 @@ protected class Category {
     final String positiveDescription;
     final String negativeName;
     final String negativeDescription;
+
+    //constructor
+    Category(){
+        File file = new File("");
+        try{
+            Scanner scan = new Scanner(file);
+            while(){
+                //file hasn't been made yet
+            }
+        }
+        catch(Exception e){
+            System.out.println("File does not exist.");
+        }    
+    }
 
 } // Category class

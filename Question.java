@@ -8,13 +8,17 @@ protected class Question {
 
     // Constructor
     Question( Category category, String prompt ) {
+        //this.category = category();
+        this.prompt = prompt;
     }
 
     // getters only, no setters for this class
-    public Category category() {
+    public int categoryId() {
+        return categoryId;
     }
 
     public String prompt() {
+        return prompt;
     }
 
 } // Question class
