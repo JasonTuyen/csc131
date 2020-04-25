@@ -1,0 +1,27 @@
+Programming Style
+TODO: Make a description of Programming Style.
+Definition
+Definition is a style of programming that favors declarative or functional languages. There is a focus on the problem definition over the implementation of a solution or, alternatively, there is a focus on using languages that allow you to specify the problem and allow the compiler to develop a solution. This style of programming is more-closely-related to mathematics.
+Instruction
+Instruction is a style of programming which emphasizes careful control of the flow of execution. Imperative programming is a natural choice for this style of programming and object oriented programming, although not strictly instruction-based, tends to be imperative inside of the objects.
+Type System
+TODO: Make a description of Type System.
+Strong
+Strong type systems are more strict about what types you are allowed to use. The types are usually explicit, usually checked at compile time, and usually difficult to change later. Memory safety is another component of strong type systems.
+Weak
+Weak type systems allow for more flexibility in writing a program. The types are usually implicit, usually checked at run-time, and usually easy to change if your ideas change. Statically typed languages which do not emphasize memory safety are also in this category.
+Abstraction Preference
+TODO: Make a description of Abstraction Preference.
+Control
+Control languages may allow the programmer to directly manipulate bits, hardware, or memory access. It is the programming style of choice for system applications because efficiency is a top priority. Memory management is either manual or strictly controlled.
+Ease of Use
+Ease of use become more important for programs on the web or when the programmer is comfortable accepting the additional overhead of garbage collection. Prototyping is easier in these languages.
+RESULTS
+DSC Haskell
+ISC Rust
+DWC Clojure/Lisp
+IWC C/C++
+DSE TypeScript
+ISE Java
+DWE JavaScript
+IWE Python
