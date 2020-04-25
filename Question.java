@@ -8,7 +8,7 @@ protected class Question {
 
     // Constructor
     Question( Category category, String prompt ) {
-        //this.category = category();
+        this.category = category.id;
         this.prompt = prompt;
     }
 
