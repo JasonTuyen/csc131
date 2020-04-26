@@ -2,6 +2,8 @@ package quizApp;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Scanner;
 import java.io.File;
 import java.util.Collections;
 
@@ -79,3 +81,63 @@ protected class Category {
     }
 
 } // Category class
+
+// Question Interpreter (Singleton Design Pattern)
+protected class Interpreter {
+	
+	LinkedList<String> qList = new LinkedList<>();
+	
+	private Interpreter() {
+		
+		String t;
+		File f = new File("ProgLanguageQuiz.txt");
+		
+		try {
+			
+			Scanner s = new Scanner(f);
+			while (s.hasNextLine()) {
+			   t = s.nextLine();
+			   qList.add(t);
+			}
+			
+		} catch (Exception e) {
+			System.out.println("File Not Found");	   
+		}
+		
+		sortCat();
+		
+	}
+	
+	private void sortCat() {
+		Object[] q = qList.toArray();
+		//Category Arrays
+		String[] DVI = new String[20];
+		String[] SVW = new String[20];
+		String[] CVE = new String[20];
+		
+		String str;
+		int x, y, z;     
+		x = y = z = 0;
+		
+		int size = q.length;
+		
+		for (int i = 0; i < size; i++) {
+			str = q[i].toString();
+			
+			if (str.charAt(0) == '1' || str.charAt(1) == '1') {
+				DVI[x] = str;
+				x++;			   
+			} else if (str.charAt(0) == '2' || str.charAt(1) == '2') {
+				SVW[y] = str;
+				y++;
+			} else if (str.charAt(0) == '3' || str.charAt(1) == '3' ) {
+				CVE[z] = str;
+				z++;
+			}
+		}		
+	}
+}
+
+
+
+}
