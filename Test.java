@@ -11,11 +11,15 @@ protected class Quiz implements Iterable<Question> {
 
     // members
     ArrayList<Question> questions;
-    ArrayList<Category> categories;  // should this be a hashmap? idk
+    ArrayList<Category> categories = new ArrayList();  // should this be a hashmap? idk
 
     // Constructors
-    public Quiz( File questionFile, File categoryFile ){
-        
+    public Quiz( File questionFile ){
+    	Category cat;
+    	for (int i=1; i<4; i++) {
+    		cat = new Category(i, "ProgLanguageCategories.txt");
+    		categories.add(cat);
+    	}
     }
 
     // methods
@@ -56,30 +60,63 @@ protected class Quiz implements Iterable<Question> {
 } // Quiz class
 
 protected class Category {
+	// Implemented by Aaron Baumgartner 4/26/2020 8PM
+	
+		// members
+	    int    id;
+	    String name;
+	    String description;
+	    String positiveName;
+	    String positiveDescription;
+	    String negativeName;
+	    String negativeDescription;
 
-    // members
-    final int    id;
-    final String name;
-    final String description;
-    final String positiveName;
-    final String positiveDescription;
-    final String negativeName;
-    final String negativeDescription;
-
-    //constructor
-    Category(){
-        File file = new File("");
-        try{
-            Scanner scan = new Scanner(file);
-            while(){
-                //file hasn't been made yet
-            }
-        }
-        catch(Exception e){
-            System.out.println("File does not exist.");
-        }
-    }
-
+	    
+	    //constructor
+	    Category(int n, String fileName){
+	    	// assign category id #
+	    	id = n;
+	    	
+	    	// open file for reading
+	        File file = new File(fileName);
+	        String text;
+	        try{
+	            Scanner scan = new Scanner(file);
+	            
+	            // skip through the file until we reach the category we wish to read
+	            for (int i=0; i<(n-1)*6; i++) {
+	            	scan.nextLine();
+	            }
+	            
+	            // read the 6 lines containing the category's information
+	            for (int i=0; i<6; i++) {
+	            	text = scan.nextLine();
+	            	switch(i) {
+	            	case 0:
+	            		name = text;
+	            		continue;
+	            	case 1:
+	            		description = text;
+	            		continue;
+	            	case 2:
+	            		positiveName = text;
+	            		continue;
+	            	case 3:
+	            		positiveDescription = text;
+	            		continue;
+	            	case 4:
+	            		negativeName = text;
+	            		continue;
+	            	case 5:
+	            		negativeDescription = text;
+	            		continue;
+	            		}
+	            	}
+	        }
+	        catch(Exception e){
+	            System.out.println("File does not exist.");
+	        }
+	    }
 } // Category class
 
 // Question Interpreter (Singleton Design Pattern)
