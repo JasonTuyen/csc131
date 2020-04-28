@@ -16,10 +16,15 @@ class CLI {
         int choice;
 
         for (Question q : quiz) {
-            System.out.println(q.prompt());
+            System.out.println(q.categoryId() + q.prompt());
             do {
                 System.out.print("> ");
                 choice = userIn.nextInt();
+                while(!(userIn.hasNextInt())) {
+            		System.out.println("Please only input numbers from 1-9");
+            		choice = userIn.nextInt();
+                }
+                
             } while (choice < 1 || choice > 9);
             choice -= 5;
             catScores[Math.abs(q.categoryId()) - 1] += Math.signum(q.categoryId()) * choice;
