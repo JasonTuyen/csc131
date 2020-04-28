@@ -16,7 +16,7 @@ class CLI {
         int choice;
 
         for (Question q : quiz) {
-            System.out.println(q.categoryId() + q.prompt());
+            System.out.println(q.prompt());
             do {
                 System.out.print("> ");
                 choice = userIn.nextInt();
