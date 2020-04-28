@@ -13,16 +13,31 @@ class CLI {
 
         int[] catScores = new int[quiz.categories.size()];
         Scanner userIn = new Scanner(System.in);
-        int choice;
+        int choice=0;
 
         for (Question q : quiz) {
             System.out.println(q.categoryId() + q.prompt());
             do {
-                System.out.print("> ");
-                choice = userIn.nextInt();
-                while(!(userIn.hasNextInt())) {
-            		System.out.println("Please only input numbers from 1-9");
-            		choice = userIn.nextInt();
+            	System.out.print("> ");
+                boolean keepgoing = true;
+                
+                while(keepgoing){
+                  
+                  if (userIn.hasNextInt()) {
+                     choice = userIn.nextInt();
+                     while(choice>9 || choice<1){
+                        keepgoing = true;
+                        System.out.println("please only input numbes 1-9");
+                        choice = userIn.nextInt();
+                     }
+                     keepgoing = false;
+                     
+                      
+                   } else {
+                      System.out.println("please only input numbes 1-9");
+                      userIn.next();
+                      keepgoing = true;
+                   }
                 }
                 
             } while (choice < 1 || choice > 9);
