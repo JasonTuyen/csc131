@@ -16,25 +16,31 @@ class CLI {
         int choice=0;
 
         for (Question q : quiz) {
-            System.out.println(q.categoryId() + q.prompt());
+            System.out.println(q.prompt());
             do {
             	System.out.print("> ");
                 boolean keepgoing = true;
                 
                 while(keepgoing){
                   
-                  if (userIn.hasNextInt()) {
-                     choice = userIn.nextInt();
-                     while(choice>9 || choice<1){
-                        keepgoing = true;
-                        System.out.println("please only input numbes 1-9");
+                	if (userIn.hasNextInt()) {
                         choice = userIn.nextInt();
-                     }
-                     keepgoing = false;
-                     
-                      
-                   } else {
-                      System.out.println("please only input numbes 1-9");
+                        while(choice>9 || choice<1){
+                           keepgoing = true;
+                           try{
+                              System.out.println("please only input numbes 1-9");
+                              choice = userIn.nextInt();
+                           }catch(Exception e){
+                              System.out.print("no letters, ");
+                              userIn.next();
+                           }
+                        }
+                        keepgoing = false;
+                        
+                        
+                         
+                      }else {
+                      System.out.println("no letters, please only input numbes 1-9");
                       userIn.next();
                       keepgoing = true;
                    }
