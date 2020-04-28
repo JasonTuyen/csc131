@@ -1,14 +1,14 @@
-package quizApp;
+// package quizApp;
 
-protected class Question {
+class Question {
 
     // members
     private final int    categoryId;
     private final String prompt;
 
     // Constructor
-    Question( Category category, String prompt ) {
-        this.category = category.id;
+    Question( int categoryId, String prompt ) {
+        this.categoryId = categoryId;
         this.prompt = prompt;
     }
 
