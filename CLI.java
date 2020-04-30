@@ -17,12 +17,11 @@ class CLI {
 
         for (Question q : quiz) {
             System.out.println(q.prompt());
-            do {
+            //do {
             	System.out.print("> ");
                 boolean keepgoing = true;
                 
                 while(keepgoing){
-                  
                 	if (userIn.hasNextInt()) {
                         choice = userIn.nextInt();
                         while(choice>9 || choice<1){
@@ -44,7 +43,7 @@ class CLI {
                    }
                 }
                 
-            } while (choice < 1 || choice > 9);
+            //} while (choice < 1 || choice > 9);
             choice -= 5;
             catScores[Math.abs(q.categoryId()) - 1] += Math.signum(q.categoryId()) * choice;
             System.out.println();
