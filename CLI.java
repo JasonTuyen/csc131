@@ -36,8 +36,6 @@ class CLI {
                            }
                         }
                         keepgoing = false;
-                        
-                        
                          
                       }else {
                       System.out.println("no letters, please only input numbes 1-9");
