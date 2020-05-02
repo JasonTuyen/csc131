@@ -1,24 +1,6 @@
-1	I often find it useful to think of mathematical abstractions when programming.
--1	Activity diagrams are my favorite type of UML diagram.
-1	It is important to write code that can be proven and verified.
--1	Good code should read like a story or a recipe.
-1	I prefer data flow diagrams to activity diagrams.
--1	Is it okay for a function to be more that 10 lines of code?
-1	Implementation is trivial once I understand a problem.
--1	Is the debugger the first step when you encounter an error?
-2	I am the person who asks “what are we?” first in a relationship.
--2	Chaos is a ladder.
-2	Strict rules make our lives easier.
--2	Formality gets in the way of real conversations.
-2	I’ve had arguments with people about the difference between and integer and a floating point number.
--2	Real programming is quick and dirty. Some people need to get out of their ivory towers.
-2	I would rather be specific first and then generalize later.
--2	The compiler should compile, not complain.
-3	Programming is more like engineering than design.
--3	It is more important for code to be readable than efficient.
-3	All programmers must have an understanding of computer hardware.
--3	The web is where it’s at!
-3	Writing desktop applications is “real” programming. Everything else is some kind of design.
--3	I jump right into writing code when I start solving a problem.
-3	I am very comfortable with managing my own memory.
--3	Ideas are the most important thing in programming; everything else can be fixed later.
+1 First Question for category 1.
+-1 Second (negative) questions for category 1.
+2 First Question for category 2.
+-2 Second (negative) questions for category 2.
+3 First Question for category 3.
+-3 Second (negative) questions for category 3.
