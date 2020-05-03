@@ -29,6 +29,7 @@ class CLI{
   <dd>This class holds the code that makes the interface for the quiz.</dd>
 </dl>
 
+
 **runQuiz Function**
 ```java
 runQuiz(Quiz q)
