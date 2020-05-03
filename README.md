@@ -27,6 +27,7 @@ class CLI{
   <dt>Description</dt>
   <dd>This class holds the code that makes the interface for the quiz.</dd>
 </dl>
+
 ```java
 runQuiz(Quiz q)
 ```
@@ -40,6 +41,7 @@ runQuiz(Quiz q)
   <dt>Outputs</dt>
   <dd>The interface for the quiz.</dd>
 </dl>
+
 ```java
 class Quiz{
 }
@@ -47,6 +49,7 @@ class Quiz{
 <dl>
   <dt>Description</dt>
   <dd>This class holds code that interacts with the Quiz's questions and categories.</dd>
+  
 ```java
 Quiz(File questionFile, File categoryFile)
 ```
@@ -61,6 +64,7 @@ Quiz(File questionFile, File categoryFile)
   <dt>Outputs</dt>
   <dd>An object of type quiz.</dd>
 </dl>
+
 ```java
 class QuestionIterator{
 }
@@ -69,6 +73,7 @@ class QuestionIterator{
   <dt>Description</dt>
   <dd>This class takes the questions and shuffles them so that they come out in a random order.</dd>
 </dl>
+
 ```java
 QuestionIterator()
 ```
@@ -82,6 +87,7 @@ QuestionIterator()
   <dt>Outputs</dt>
   <dd>The questions in random order.</dd>
 </dl>
+
 ```java
 class Category{
 }
@@ -90,6 +96,7 @@ class Category{
   <dt>Description</dt>
   <dd>This class reads our categories from a text file.</dd>
 </dl>
+
 ```java
 Category(int id, String name, Scanner inf)
 ```
@@ -105,6 +112,7 @@ Category(int id, String name, Scanner inf)
   <dt>Outputs</dt>
   <dd>An object of type category containing the name and description of the category.</dd>
 </dl>
+
 ```java
 class Question{
 }
@@ -113,6 +121,7 @@ class Question{
   <dt>Description</dt>
   <dd>This class reads our questions from a text file.</dd>
 </dl>
+
 ```java
 Question(int categoryId, String prompt)
 ```
@@ -127,6 +136,7 @@ Question(int categoryId, String prompt)
   <dt>Outputs</dt>
   <dd>An object of type question.</dd>
 </dl>
+
 ```java
 categoryId()
 ```
@@ -140,6 +150,7 @@ categoryId()
   <dt>Outputs</dt>
   <dd>The category of the current question</dd>
 </dl>
+
 ```java
 prompt()
 ```
