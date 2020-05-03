@@ -19,6 +19,7 @@ A repository for our csc131 group project. We use the SCRUM process and Java cod
 5. Continue through until there are no more statements/questions and enjoy your results.
 
 ## Documentation of Functions
+**CLI Class**
 ```java
 class CLI{
 }
@@ -28,6 +29,7 @@ class CLI{
   <dd>This class holds the code that makes the interface for the quiz.</dd>
 </dl>
 
+**runQuiz Function**
 ```java
 runQuiz(Quiz q)
 ```
@@ -42,6 +44,7 @@ runQuiz(Quiz q)
   <dd>The interface for the quiz.</dd>
 </dl>
 
+**Quiz Class**
 ```java
 class Quiz{
 }
@@ -50,6 +53,7 @@ class Quiz{
   <dt>Description</dt>
   <dd>This class holds code that interacts with the Quiz's questions and categories.</dd>
   
+**Quiz Function**
 ```java
 Quiz(File questionFile, File categoryFile)
 ```
@@ -65,6 +69,7 @@ Quiz(File questionFile, File categoryFile)
   <dd>An object of type quiz.</dd>
 </dl>
 
+**QuestionIterator Class**
 ```java
 class QuestionIterator{
 }
@@ -74,6 +79,7 @@ class QuestionIterator{
   <dd>This class takes the questions and shuffles them so that they come out in a random order.</dd>
 </dl>
 
+**QuestionIterator Function**
 ```java
 QuestionIterator()
 ```
@@ -88,6 +94,7 @@ QuestionIterator()
   <dd>The questions in random order.</dd>
 </dl>
 
+**Category Class**
 ```java
 class Category{
 }
@@ -97,6 +104,7 @@ class Category{
   <dd>This class reads our categories from a text file.</dd>
 </dl>
 
+**Category Function**
 ```java
 Category(int id, String name, Scanner inf)
 ```
@@ -113,6 +121,7 @@ Category(int id, String name, Scanner inf)
   <dd>An object of type category containing the name and description of the category.</dd>
 </dl>
 
+**Question Class**
 ```java
 class Question{
 }
@@ -122,6 +131,7 @@ class Question{
   <dd>This class reads our questions from a text file.</dd>
 </dl>
 
+**Question Function**
 ```java
 Question(int categoryId, String prompt)
 ```
@@ -137,6 +147,7 @@ Question(int categoryId, String prompt)
   <dd>An object of type question.</dd>
 </dl>
 
+**categoryId Function**
 ```java
 categoryId()
 ```
@@ -151,6 +162,7 @@ categoryId()
   <dd>The category of the current question</dd>
 </dl>
 
+**prompt Function**
 ```java
 prompt()
 ```
